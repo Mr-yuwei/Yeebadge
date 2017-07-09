@@ -1,31 +1,28 @@
 # Yeebadge
 
+![Simulator Screen Shot 2017年7月9日 下午8.23.10.png](http://upload-images.jianshu.io/upload_images/1488651-b816a3792c207c45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ```
--(void)yee_MakeBadgeText:(NSString *)text
-textColor:(UIColor *)tColor
-backColor:(UIColor *)backColor
-Font:(UIFont*)tfont{
-if ([self yee_BadgeLable]==nil) {//如果没有绑定就重新创建,然后绑定
-YeeBadgeLable *badgeLable =[[YeeBadgeLable alloc] init];
-objc_setAssociatedObject(self, YeeBadgeLableString, badgeLable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-[self addSubview:badgeLable];
-}
-CGSize textSize=[self sizeWithString:text font:tfont constrainedToWidth:self.frame.size.width];
-if ([self isKindOfClass:[UIButton class]]) {
+UIView *blueView=[[UIView alloc] init];
 
-UIButton *weakButton=(UIButton*)self;
-[[self  yee_BadgeLable] makeBrdgeViewWithText:text textColor:tColor backColor:backColor textFont:tfont tframe:CGRectMake(weakButton.imageView.frame.size.width*0.5+weakButton.imageView.frame.origin.x,weakButton.imageView.frame.origin.y, textSize.width+8.0, textSize.height)];
+[blueView setFrame:CGRectMake(40, 70, 200, 20)];
+[blueView  yee_MakeBadgeText:@"" textColor:[UIColor whiteColor] backColor:[UIColor redColor] Font:[UIFont systemFontOfSize:10]];
+[blueView setBackgroundColor:[UIColor blueColor]];
+[self.view addSubview:blueView];
 
-}else if ([self isKindOfClass:[UITabBarItem class]]){
+UIView *grayView=[[UIView alloc] init];
+
+[grayView setFrame:CGRectMake(40, 120, 200, 20)];
+[grayView  yee_MakeBadgeText:@"100" textColor:[UIColor whiteColor] backColor:[UIColor redColor] Font:[UIFont systemFontOfSize:10]];
+[grayView setBackgroundColor:[UIColor grayColor]];
+[self.view addSubview:grayView];
 
 
+UIButton *buttonView=[UIButton buttonWithType:UIButtonTypeCustom];
+[buttonView setFrame:CGRectMake(40, 180, 50, 40)];
+[buttonView setImage:[UIImage imageNamed:@"artical_detail_icon_comment_disabled"] forState:UIControlStateNormal];
+[buttonView  yee_MakeBadgeText:@"2345" textColor:[UIColor whiteColor] backColor:[UIColor redColor] Font:[UIFont systemFontOfSize:9]];
 
-}else{
-
-[[self  yee_BadgeLable] makeBrdgeViewWithText:text textColor:tColor backColor:backColor textFont:tfont tframe:CGRectMake(self.frame.size.width-(textSize.width+8.0)*0.5, -textSize.height*0.5, textSize.width+8.0, textSize.height)];
-}
-}
-
-
+[self.view addSubview:buttonView];
 ```
 为任意视图添加小圆点和角标文字
