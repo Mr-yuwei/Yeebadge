@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "UIView+Badge.h"
+#include <objc/runtime.h>
+#import "UITabBarItem+Badge.h"
 
 @interface ViewController ()
 {
@@ -55,6 +57,29 @@
         [buttonView  yee_MakeBadgeText:[NSString stringWithFormat:@"%ld",m_iCount]  textColor:[UIColor whiteColor] backColor:[UIColor redColor] Font:[UIFont systemFontOfSize:9]];
         m_iCount++;
     }];
+    
+    
+    unsigned int count = 0;
+    Ivar *property = class_copyIvarList([UITabBarItem class], &count);
+    for (int i = 0; i < count; i++) {
+        
+        Ivar var = property[i];
+        const char *name = ivar_getName(var);
+        const char *type = ivar_getTypeEncoding(var);
+        NSLog(@"%s =============== %s",name,type);
+        
+    }
+    
+   // UIView *TabBar_item_=[self.tabBarItem valueForKey:@"_view"];
+    
+    
+
+//    UIView *UITabBarSwappableImageView=[TabBar_item_ valueForKey:@"UITabBarSwappableImageView"];
+    
+    
+    [self.tabBarItem yee_MakeRedBadge:2.0 color:[UIColor blueColor]];
+    
+    
 }
 
 

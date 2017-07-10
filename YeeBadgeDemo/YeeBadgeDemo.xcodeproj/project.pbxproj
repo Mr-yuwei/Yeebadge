@@ -17,6 +17,8 @@
 		88AFBF3F1F12592E00934B19 /* YeeBadgeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF3E1F12592E00934B19 /* YeeBadgeDemoUITests.m */; };
 		88AFBF4F1F1259A500934B19 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF4E1F1259A500934B19 /* UIView+Badge.m */; };
 		88E559D11F1330D200E3B0A1 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E559D01F1330D200E3B0A1 /* TabBarViewController.m */; };
+		88E559F41F137AE400E3B0A1 /* UITabBarItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E559F31F137AE400E3B0A1 /* UITabBarItem+Badge.m */; };
+		88E559F71F137AF900E3B0A1 /* YeeBadgeLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E559F61F137AF900E3B0A1 /* YeeBadgeLable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		88AFBF4E1F1259A500934B19 /* UIView+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Badge.m"; sourceTree = "<group>"; };
 		88E559CF1F1330D200E3B0A1 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		88E559D01F1330D200E3B0A1 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
+		88E559F21F137AE400E3B0A1 /* UITabBarItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+Badge.h"; sourceTree = "<group>"; };
+		88E559F31F137AE400E3B0A1 /* UITabBarItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+Badge.m"; sourceTree = "<group>"; };
+		88E559F51F137AF900E3B0A1 /* YeeBadgeLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeBadgeLable.h; sourceTree = "<group>"; };
+		88E559F61F137AF900E3B0A1 /* YeeBadgeLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeBadgeLable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +118,8 @@
 				88AFBF1D1F12592E00934B19 /* AppDelegate.m */,
 				88AFBF1F1F12592E00934B19 /* ViewController.h */,
 				88AFBF201F12592E00934B19 /* ViewController.m */,
-				88E559D01F1330D200E3B0A1 /* TabBarViewController.m */,
 				88E559CF1F1330D200E3B0A1 /* TabBarViewController.h */,
+				88E559D01F1330D200E3B0A1 /* TabBarViewController.m */,
 				88AFBF221F12592E00934B19 /* Main.storyboard */,
 				88AFBF251F12592E00934B19 /* Assets.xcassets */,
 				88AFBF271F12592E00934B19 /* LaunchScreen.storyboard */,
@@ -152,8 +158,12 @@
 		88AFBF4C1F1259A500934B19 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				88E559F51F137AF900E3B0A1 /* YeeBadgeLable.h */,
+				88E559F61F137AF900E3B0A1 /* YeeBadgeLable.m */,
 				88AFBF4D1F1259A500934B19 /* UIView+Badge.h */,
 				88AFBF4E1F1259A500934B19 /* UIView+Badge.m */,
+				88E559F21F137AE400E3B0A1 /* UITabBarItem+Badge.h */,
+				88E559F31F137AE400E3B0A1 /* UITabBarItem+Badge.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -291,8 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E559F41F137AE400E3B0A1 /* UITabBarItem+Badge.m in Sources */,
 				88E559D11F1330D200E3B0A1 /* TabBarViewController.m in Sources */,
 				88AFBF4F1F1259A500934B19 /* UIView+Badge.m in Sources */,
+				88E559F71F137AF900E3B0A1 /* YeeBadgeLable.m in Sources */,
 				88AFBF211F12592E00934B19 /* ViewController.m in Sources */,
 				88AFBF1E1F12592E00934B19 /* AppDelegate.m in Sources */,
 				88AFBF1B1F12592E00934B19 /* main.m in Sources */,
