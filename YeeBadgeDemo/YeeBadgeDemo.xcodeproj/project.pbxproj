@@ -16,6 +16,7 @@
 		88AFBF341F12592E00934B19 /* YeeBadgeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF331F12592E00934B19 /* YeeBadgeDemoTests.m */; };
 		88AFBF3F1F12592E00934B19 /* YeeBadgeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF3E1F12592E00934B19 /* YeeBadgeDemoUITests.m */; };
 		88AFBF4F1F1259A500934B19 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF4E1F1259A500934B19 /* UIView+Badge.m */; };
+		88E559D11F1330D200E3B0A1 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E559D01F1330D200E3B0A1 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		88AFBF401F12592E00934B19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88AFBF4D1F1259A500934B19 /* UIView+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Badge.h"; sourceTree = "<group>"; };
 		88AFBF4E1F1259A500934B19 /* UIView+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Badge.m"; sourceTree = "<group>"; };
+		88E559CF1F1330D200E3B0A1 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
+		88E559D01F1330D200E3B0A1 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				88AFBF1D1F12592E00934B19 /* AppDelegate.m */,
 				88AFBF1F1F12592E00934B19 /* ViewController.h */,
 				88AFBF201F12592E00934B19 /* ViewController.m */,
+				88E559D01F1330D200E3B0A1 /* TabBarViewController.m */,
+				88E559CF1F1330D200E3B0A1 /* TabBarViewController.h */,
 				88AFBF221F12592E00934B19 /* Main.storyboard */,
 				88AFBF251F12592E00934B19 /* Assets.xcassets */,
 				88AFBF271F12592E00934B19 /* LaunchScreen.storyboard */,
@@ -286,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E559D11F1330D200E3B0A1 /* TabBarViewController.m in Sources */,
 				88AFBF4F1F1259A500934B19 /* UIView+Badge.m in Sources */,
 				88AFBF211F12592E00934B19 /* ViewController.m in Sources */,
 				88AFBF1E1F12592E00934B19 /* AppDelegate.m in Sources */,

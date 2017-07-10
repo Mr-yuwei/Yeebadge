@@ -18,8 +18,9 @@
                backColor:(UIColor *)backColor
                     Font:(UIFont*)tfont;
 
+
 //只设置小圆点
-//-(void)yee_MakeRedBadge:(CGFloat)corners color:(UIColor *)circleColor;
+-(void)yee_MakeRedBadge:(CGFloat)corner color:(UIColor *)cornerColor;
 
 -(void)removeBadgeView;
 

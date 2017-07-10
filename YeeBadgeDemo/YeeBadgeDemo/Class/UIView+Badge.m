@@ -16,6 +16,7 @@ const static  void *YeeBadgeLableString =&YeeBadgeLableString;
     UIColor  *m_pBackGroundClolor;   //背景颜色
     UIFont   *m_pLableFont;          //字体大小
     CGSize    m_CMinSize;             //最小大小
+    UIImageView  *m_pBackImageView;
     NSTextAlignment m_tTextAlignment; //对齐方式
 }
 @end
@@ -25,7 +26,6 @@ const static  void *YeeBadgeLableString =&YeeBadgeLableString;
 -(instancetype)init{
     
     if (self=[super init]) {
-        
         m_pTextClolor=[UIColor  whiteColor];
         m_pBackGroundClolor=[UIColor  redColor];
         m_pLableFont=[UIFont systemFontOfSize:10];
@@ -49,11 +49,24 @@ const static  void *YeeBadgeLableString =&YeeBadgeLableString;
         self.font=font;
         self.text=text;
         self.textAlignment=m_tTextAlignment;
-        self.layer.masksToBounds=YES;
-        self.layer.cornerRadius=frame.size.height*0.5;
         m_pTextClolor=textColor;
         m_pBackGroundClolor=backGColor;
         m_pLableFont=font;
+    //创建mask层，超出的部分将不显示
+    UIBezierPath *path= [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners: UIRectCornerAllCorners  cornerRadii:CGSizeMake(self.frame.size.height*0.5, self.frame.size.height*0.5)];
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = path.CGPath;
+    self.layer.mask = maskLayer;
+}
+-(void)makeBrdgeViewWithCor:(CGFloat )corner CornerColor:(UIColor *)cornerColor{
+
+    UIBezierPath *path= [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners: UIRectCornerAllCorners  cornerRadii:CGSizeMake(corner,corner)];
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = self.bounds;
+    maskLayer.path =  path.CGPath;
+    self.backgroundColor=cornerColor;
+    self.layer.mask=maskLayer;
 }
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
@@ -70,6 +83,21 @@ const static  void *YeeBadgeLableString =&YeeBadgeLableString;
 
 @implementation UIView (Badge)
 
+//只是设置圆点
+-(void)yee_MakeRedBadge:(CGFloat)corner color:(UIColor *)cornerColor{
+    
+  //圆点大小
+  //圆点颜色
+    if ([self yee_BadgeLable]==nil) {//如果没有绑定就重新创建,然后绑定
+        YeeBadgeLable *badgeLable =[[YeeBadgeLable alloc] init];
+        objc_setAssociatedObject(self, YeeBadgeLableString, badgeLable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        [self addSubview:badgeLable];
+    }
+    [[self yee_BadgeLable]setFrame:CGRectMake(self.frame.size.width-corner, -corner, corner*2.0, corner*2.0)];
+   
+    [[self  yee_BadgeLable] makeBrdgeViewWithCor:corner CornerColor:cornerColor];
+    
+}
 -(void)yee_MakeBadgeText:(NSString *)text
                textColor:(UIColor *)tColor
                backColor:(UIColor *)backColor
