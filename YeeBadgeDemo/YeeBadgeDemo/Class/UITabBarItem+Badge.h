@@ -17,4 +17,7 @@
 
 -(void)yee_MakeRedBadge:(CGFloat)corner color:(UIColor *)cornerColor;
 
+
+-(void)removeBadgeView;
+
 @end
