@@ -28,6 +28,7 @@
     //UIImageView
     //UIView
     
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     UIView *blueView=[[UIView alloc] init];
     
     [blueView setFrame:CGRectMake(40, 70, 200, 20)];
@@ -70,20 +71,8 @@
         
     }
     
-   // UIView *TabBar_item_=[self.tabBarItem valueForKey:@"_view"];
-    
-    
 
-//    UIView *UITabBarSwappableImageView=[TabBar_item_ valueForKey:@"UITabBarSwappableImageView"];
-    
-    
-    
-    [self.tabBarItem yee_MakeRedBadge:2.0 color:[UIColor blueColor]];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [self.tabBarItem removeBadgeView];
-    });
-    
+    [self.tabBarItem yee_MakeRedBadge:2.0 color:[UIColor redColor]];
     
 }
 

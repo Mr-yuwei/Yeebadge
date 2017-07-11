@@ -2,6 +2,9 @@
 
 ![Simulator Screen Shot 2017年7月9日 下午8.23.10.png](http://upload-images.jianshu.io/upload_images/1488651-b816a3792c207c45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+
+![Simulator Screen Shot 2017年7月11日 上午11.21.09.png](http://upload-images.jianshu.io/upload_images/1488651-9a1ee5f232aed3ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ```
 UIView *blueView=[[UIView alloc] init];
 
