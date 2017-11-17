@@ -29,13 +29,9 @@
         objc_setAssociatedObject(self, &Yee_TabBar_BadgeLableString, badgeLable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
           [UITabBarSwappableImageView addSubview:badgeLable];
     }
-    
     [[self yee_BadgeLable]setFrame:CGRectMake(UITabBarSwappableImageView.frame.size.width-corner, -corner, corner*2.0, corner*2.0)];
-    
     [[self  yee_BadgeLable] makeBrdgeViewWithCor:corner CornerColor:cornerColor];
 
-    
-    
 }
 -(void)removeBadgeView{
     
@@ -49,13 +45,11 @@
 -(UIView *)findSwappableImageViewByInView:(UIView *)inView{
     
     for (UIView *subView in inView.subviews) {
-        
-        
+
         if ([subView isKindOfClass:[UIImageView class]]) {
             
             return subView;
         }
-        
     }
     return nil;
 }

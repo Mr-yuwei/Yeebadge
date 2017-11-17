@@ -70,7 +70,6 @@
         NSLog(@"%s =============== %s",name,type);
         
     }
-    
 
     [self.tabBarItem yee_MakeRedBadge:2.0 color:[UIColor redColor]];
     

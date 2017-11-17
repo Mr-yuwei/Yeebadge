@@ -12,10 +12,8 @@
 #import "YeeBadgeLable.h"
 const static  void *YeeBadgeLableString =&YeeBadgeLableString;
 @implementation UIView (Badge)
-
 //只是设置圆点
 -(void)yee_MakeRedBadge:(CGFloat)corner color:(UIColor *)cornerColor{
-    
   //圆点大小
   //圆点颜色
     if ([self yee_BadgeLable]==nil) {//如果没有绑定就重新创建,然后绑定
@@ -24,9 +22,7 @@ const static  void *YeeBadgeLableString =&YeeBadgeLableString;
         [self addSubview:badgeLable];
     }
     [[self yee_BadgeLable]setFrame:CGRectMake(self.frame.size.width-corner, -corner, corner*2.0, corner*2.0)];
-   
     [[self  yee_BadgeLable] makeBrdgeViewWithCor:corner CornerColor:cornerColor];
-    
 }
 -(void)yee_MakeBadgeText:(NSString *)text
                textColor:(UIColor *)tColor

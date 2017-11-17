@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88245D6C1F6BFB7E009E398E /* UIView+YeePlaceHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88245D6B1F6BFB7E009E398E /* UIView+YeePlaceHolderView.m */; };
+		88245D711F6BFE8A009E398E /* YeeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88245D701F6BFE8A009E398E /* YeeBaseView.m */; };
 		88AFBF1B1F12592E00934B19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF1A1F12592E00934B19 /* main.m */; };
 		88AFBF1E1F12592E00934B19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF1D1F12592E00934B19 /* AppDelegate.m */; };
 		88AFBF211F12592E00934B19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AFBF201F12592E00934B19 /* ViewController.m */; };
@@ -39,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88245D6A1F6BFB7E009E398E /* UIView+YeePlaceHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YeePlaceHolderView.h"; sourceTree = "<group>"; };
+		88245D6B1F6BFB7E009E398E /* UIView+YeePlaceHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YeePlaceHolderView.m"; sourceTree = "<group>"; };
+		88245D6D1F6BFC25009E398E /* YeePlaceHolderViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YeePlaceHolderViewHeader.h; sourceTree = "<group>"; };
+		88245D6E1F6BFCEC009E398E /* YeeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeProtocol.h; sourceTree = "<group>"; };
+		88245D6F1F6BFE8A009E398E /* YeeBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeBaseView.h; sourceTree = "<group>"; };
+		88245D701F6BFE8A009E398E /* YeeBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeBaseView.m; sourceTree = "<group>"; };
 		88AFBF161F12592E00934B19 /* YeeBadgeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeeBadgeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AFBF1A1F12592E00934B19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88AFBF1C1F12592E00934B19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +124,12 @@
 				88AFBF4C1F1259A500934B19 /* Class */,
 				88AFBF1C1F12592E00934B19 /* AppDelegate.h */,
 				88AFBF1D1F12592E00934B19 /* AppDelegate.m */,
+				88245D6F1F6BFE8A009E398E /* YeeBaseView.h */,
+				88245D701F6BFE8A009E398E /* YeeBaseView.m */,
+				88245D6E1F6BFCEC009E398E /* YeeProtocol.h */,
+				88245D6D1F6BFC25009E398E /* YeePlaceHolderViewHeader.h */,
+				88245D6A1F6BFB7E009E398E /* UIView+YeePlaceHolderView.h */,
+				88245D6B1F6BFB7E009E398E /* UIView+YeePlaceHolderView.m */,
 				88AFBF1F1F12592E00934B19 /* ViewController.h */,
 				88AFBF201F12592E00934B19 /* ViewController.m */,
 				88E559CF1F1330D200E3B0A1 /* TabBarViewController.h */,
@@ -304,7 +318,9 @@
 				88E559F41F137AE400E3B0A1 /* UITabBarItem+Badge.m in Sources */,
 				88E559D11F1330D200E3B0A1 /* TabBarViewController.m in Sources */,
 				88AFBF4F1F1259A500934B19 /* UIView+Badge.m in Sources */,
+				88245D6C1F6BFB7E009E398E /* UIView+YeePlaceHolderView.m in Sources */,
 				88E559F71F137AF900E3B0A1 /* YeeBadgeLable.m in Sources */,
+				88245D711F6BFE8A009E398E /* YeeBaseView.m in Sources */,
 				88AFBF211F12592E00934B19 /* ViewController.m in Sources */,
 				88AFBF1E1F12592E00934B19 /* AppDelegate.m in Sources */,
 				88AFBF1B1F12592E00934B19 /* main.m in Sources */,
