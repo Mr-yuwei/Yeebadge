@@ -89,6 +89,7 @@
 		886B9187208051AB00392854 /* ViewControllerTestTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTestTwo.m; sourceTree = "<group>"; };
 		886B918B2080A10500392854 /* NSObject+IvarNSlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+IvarNSlog.h"; sourceTree = "<group>"; };
 		886B918C2080A10500392854 /* NSObject+IvarNSlog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IvarNSlog.m"; sourceTree = "<group>"; };
+		886B91902080B8DA00392854 /* YeeBadgeViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YeeBadgeViewHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +182,7 @@
 		886B916C20803C6200392854 /* YeeBadgeView */ = {
 			isa = PBXGroup;
 			children = (
+				886B91902080B8DA00392854 /* YeeBadgeViewHeader.h */,
 				886B916D20803C8600392854 /* YeeBadgeView.h */,
 				886B916E20803C8600392854 /* YeeBadgeView.m */,
 				886B917220803CFD00392854 /* UIView+YeeBadge.h */,
