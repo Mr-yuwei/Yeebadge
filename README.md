@@ -6,6 +6,11 @@ add badgeView for UIView
 ### How to use
 
  * UITabBarItem
+ ```
+ self.tabBarItem.redDotColor =[UIColor blueColor];
+ self.tabBarItem.redDotNumber = 100;
+ [self.tabBarItem ShowBadgeView];
+ ```
  * UIView
  * UIBarButtonItem
 
