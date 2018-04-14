@@ -2,7 +2,14 @@
 
 add badgeView for UIView
 
+### OverView
 
+Support Three Style,but you don't need to know it's implementation, i  haved deal with it
+
+  *   YeeBadgeRedDotStytle
+  *   YeeBadgeNumberStytle
+  *   YeeBadgeTextStytle
+  
 ### How to use
 
  * UITabBarItem
