@@ -9,6 +9,7 @@
 #import "ViewControllerTestOne.h"
 #import "YeeBadgeView.h"
 #import "NSObject+IvarNSlog.h"
+#import "YeeBadgeViewHeader.h"
 @interface ViewControllerTestOne ()
 {
    
@@ -24,25 +25,9 @@
     [super viewDidLoad];
     self.title=@"one";
     [self add_OwnView];
-    if (@available(iOS 10.0, *)) {
-        self.tabBarItem.badgeColor =[UIColor redColor];
-    } else {
-        // Fallback on earlier versions
-    }
-
-    UITabBarItem *tabBar = self.tabBarItem;
-      NSLog(@"%@ ",tabBar);
-    UIView *UITabBarButton  = [tabBar  valueForKey:@"view"];
- 
-    
-  
-    for (UIView *view in UITabBarButton.subviews) {
-        
-        NSLog(@" calssName_ %@",NSStringFromClass([view class]));
-    }
-    
-    
-    //[NSObject PrintClassIvar:[YeeBadgeView class]];
+    self.tabBarItem.redDotColor =[UIColor blueColor];
+    self.tabBarItem.redDotNumber = 100;
+    [self.tabBarItem ShowBadgeView];
 }
 -(void)add_OwnView{
     
@@ -50,10 +35,12 @@
     [m_pContentView setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:m_pContentView];
     YeeBadgeView *m_pBadgeView=[YeeBadgeView  new];
-////    m_pBadgeView.redDotNumber = 2;
-//    m_pBadgeView.redDotText=@"12";
-//      m_pBadgeView.redDotText=@"12";
+    m_pBadgeView.redDotText = @"2355";
     [m_pContentView addSubview:m_pBadgeView];
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    self.tabBarItem.redDotNumber = arc4random()%100;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

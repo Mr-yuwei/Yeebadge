@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UITabBarItem (YeeBadge)
+#import "YeeBadgeProtocol.h"
+@interface UITabBarItem (YeeBadge)<YeeBadgeProtocol>
+@property(nonatomic,assign)CGFloat   redDotRadius;
+@property(nonatomic,assign)NSInteger redDotNumber;
+@property(nonatomic,assign)NSInteger redDotMaxNumber;
+@property(nonatomic,copy)  NSString  *redDotText;
+@property(nonatomic,retain)UIColor   *redDotColor;
+@property(nonatomic,retain)UIColor   *redDotBoderColor;
+@property(nonatomic,retain)UIColor   *redDotTextColor;
+@property(nonatomic,retain)UIFont    *redDotTextFont;
+@property(nonatomic,assign)CGPoint   redDotOffset;   // default is (0.0)
+// show badgeView
+-(void)ShowBadgeView;
+// hiden badgeView
+-(void)hideBadgeView;
 
 @end

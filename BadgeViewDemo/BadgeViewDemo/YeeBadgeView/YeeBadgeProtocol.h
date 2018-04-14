@@ -1,14 +1,16 @@
 //
-//  UIView+YeeBadge.h
+//  YeeBadgeProtocol.h
 //  BadgeViewDemo
 //
-//  Created by Yee on 2018/4/13.
+//  Created by Yee on 2018/4/14.
 //  Copyright © 2018年 Yee. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "YeeBadgeProtocol.h"
-@interface UIView (YeeBadge)<YeeBadgeProtocol>
+#import <Foundation/Foundation.h>
+
+@protocol YeeBadgeProtocol <NSObject>
+
+@optional
 
 @property(nonatomic,assign)CGFloat   redDotRadius;
 @property(nonatomic,assign)NSInteger redDotNumber;

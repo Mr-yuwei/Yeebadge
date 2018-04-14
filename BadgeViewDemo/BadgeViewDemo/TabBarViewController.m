@@ -22,35 +22,22 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [self configureTab];
     [self addChildrenVC];
     [NSObject PrintClassIvar:[UITabBarItem class]];
 }
 -(void)addChildrenVC{
     
     ViewControllerTestOne *one= [[ViewControllerTestOne alloc] init];
+     ViewControllerTestTwo *two= [[ViewControllerTestTwo alloc] init];
     UINavigationController *testOneNav=[[UINavigationController alloc] initWithRootViewController:one];
-    UINavigationController *testTwoNav=[[UINavigationController alloc] initWithRootViewController:[[ViewControllerTestTwo alloc]init]];
+    UINavigationController *testTwoNav=[[UINavigationController alloc] initWithRootViewController:two];
     one.tabBarItem.image = [UIImage imageNamed:@"icon_gouwuche_yidianji"];
-    testOneNav.tabBarItem.badgeValue=@"1099";
     one.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_gouwuche_yidianji"];
     testOneNav.title=@"one";
     testTwoNav.title=@"two";
+    two.tabBarItem.image = [UIImage imageNamed:@"icon_gouwuche_yidianji"];
+    two.tabBarItem.selectedImage = [UIImage imageNamed:@"icon_gouwuche_yidianji"];
     self.viewControllers = @[testOneNav,testTwoNav];
-    
-}
--(void)configureTab
-{
-    UITabBarItem *item                 = [UITabBarItem appearance];
-    //设置默认状态文字的颜色
-    NSMutableDictionary *md            = [NSMutableDictionary dictionary];
-    md[NSForegroundColorAttributeName] = [UIColor  grayColor];
-    [item setTitleTextAttributes:md forState:UIControlStateNormal];
-    //设置高亮状态文字的颜色
-    NSMutableDictionary *higMd            = [NSMutableDictionary dictionary];
-    higMd[NSForegroundColorAttributeName] =[UIColor redColor];;
-    [item setTitleTextAttributes:higMd forState:UIControlStateSelected];
-    self.tabBar.tintColor = [UIColor redColor];
     
 }
 - (void)didReceiveMemoryWarning {

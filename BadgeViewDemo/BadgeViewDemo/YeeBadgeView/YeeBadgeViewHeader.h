@@ -13,5 +13,7 @@
 #import "UIView+YeeBadge.h"
 #import "UIBarButtonItem+YeeBadge.h"
 #import "UITabBarItem+YeeBadge.h"
+#import "YeeBadgeProtocol.h"
+
 
 #endif /* YeeBadgeViewHeader_h */

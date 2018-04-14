@@ -25,5 +25,6 @@ typedef NS_ENUM(NSInteger,YeeBadgeStytle){
 @property(nonatomic,retain)UIColor   *redDotBoderColor;
 @property(nonatomic,retain)UIColor   *redDotTextColor;
 @property(nonatomic,retain)UIFont    *redDotTextFont;
+@property(nonatomic,assign)CGPoint   redDotOffset;   // default is (0.0)
 
 @end

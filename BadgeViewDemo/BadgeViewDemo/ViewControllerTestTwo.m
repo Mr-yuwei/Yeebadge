@@ -22,6 +22,7 @@
     
     [super viewDidLoad];
     self.title=@"two";
+    self.tabBarItem.badgeValue=@"1355";
 }
 
 - (void)didReceiveMemoryWarning {
