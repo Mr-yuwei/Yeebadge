@@ -23,7 +23,7 @@
     
     [super viewDidLoad];
     [self addChildrenVC];
-    [NSObject PrintClassIvar:[UITabBarItem class]];
+  
 }
 -(void)addChildrenVC{
     

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "YeeBadgeProtocol.h"
 @interface UIView (YeeBadge)<YeeBadgeProtocol>
-
 @property(nonatomic,assign)CGFloat   redDotRadius;
 @property(nonatomic,assign)NSInteger redDotNumber;
 @property(nonatomic,assign)NSInteger redDotMaxNumber;

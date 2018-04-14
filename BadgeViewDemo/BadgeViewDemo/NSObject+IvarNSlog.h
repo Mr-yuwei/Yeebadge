@@ -12,9 +12,5 @@
 
 +(void)PrintClassIvar:(Class)subClass;
 
-+(void)PrintClassMethod:(Class)subClass;
-
-
-
 
 @end

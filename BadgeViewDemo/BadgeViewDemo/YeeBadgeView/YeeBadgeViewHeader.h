@@ -15,5 +15,4 @@
 #import "UITabBarItem+YeeBadge.h"
 #import "YeeBadgeProtocol.h"
 
-
 #endif /* YeeBadgeViewHeader_h */

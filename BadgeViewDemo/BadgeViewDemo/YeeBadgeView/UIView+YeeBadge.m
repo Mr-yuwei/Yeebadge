@@ -30,9 +30,6 @@ static NSString *Yee_BadgeViewOffsetKey= @"Yee_BadgeViewOffsetKey";
    NSLayoutConstraint *rightConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:self.redDotOffset.x];
     [self addConstraints:@[topConstraint,rightConstraint]];
 }
-/*
- @property(nonatomic,retain)UIFont    *redDotTextFont;
- */
 -(void)setRedDotRadius:(CGFloat)redDotRadius{
     
     [self _yeeBadgeView].redDotRadius =redDotRadius;
@@ -64,6 +61,7 @@ static NSString *Yee_BadgeViewOffsetKey= @"Yee_BadgeViewOffsetKey";
 -(void)setRedDotColor:(UIColor *)redDotColor{
     
     if (redDotColor==nil) {
+        
         redDotColor=[UIColor redColor];
     }
     [self _yeeBadgeView].redDotColor =redDotColor;

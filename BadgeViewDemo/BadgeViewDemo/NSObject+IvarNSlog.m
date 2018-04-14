@@ -23,16 +23,9 @@
     objc_property_t *property_t = class_copyPropertyList([subClass class], &pcount);
     for (NSInteger i=0; i<pcount; i++) {
         objc_property_t  property = property_t[i];
-    
         NSLog(@"objc_property_t %s code_%s" ,property_getName(property),property_getAttributes(property));
     }
     free(ivarArry);
     free(property_t);
 }
-
-+(void)PrintClassMethod:(Class)subClass{
-    
-    
-}
-
 @end

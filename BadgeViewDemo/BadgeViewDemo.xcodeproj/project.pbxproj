@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		885164C52081E5F20099559D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885164C42081E5F20099559D /* TableViewCell.m */; };
 		886B913720803AF400392854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B913620803AF400392854 /* AppDelegate.m */; };
 		886B913A20803AF400392854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B913920803AF400392854 /* ViewController.m */; };
 		886B913F20803AF400392854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886B913E20803AF400392854 /* Assets.xcassets */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		885164C32081E5F20099559D /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		885164C42081E5F20099559D /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		886B913220803AF400392854 /* BadgeViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886B913520803AF400392854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		886B913620803AF400392854 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				886B916C20803C6200392854 /* YeeBadgeView */,
 				886B916720803B3C00392854 /* TabBarViewController.h */,
 				886B916820803B3C00392854 /* TabBarViewController.m */,
+				885164C32081E5F20099559D /* TableViewCell.h */,
+				885164C42081E5F20099559D /* TableViewCell.m */,
 				886B9186208051AB00392854 /* ViewControllerTestTwo.h */,
 				886B9187208051AB00392854 /* ViewControllerTestTwo.m */,
 				886B91812080514400392854 /* ViewControllerTestOne.h */,
@@ -330,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				886B917420803CFD00392854 /* UIView+YeeBadge.m in Sources */,
+				885164C52081E5F20099559D /* TableViewCell.m in Sources */,
 				886B916920803B3C00392854 /* TabBarViewController.m in Sources */,
 				886B913A20803AF400392854 /* ViewController.m in Sources */,
 				886B914520803AF400392854 /* main.m in Sources */,

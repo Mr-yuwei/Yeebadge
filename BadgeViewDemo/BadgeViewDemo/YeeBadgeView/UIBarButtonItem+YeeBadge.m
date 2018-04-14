@@ -19,9 +19,14 @@
     struct objc_method_description  description = protocol_getMethodDescription(@protocol(YeeBadgeProtocol), aSelector, NO, YES);
     if (description.name != NULL) {
         
-        return [UIView new];
+        return [self  findBadgeTargetView];
     }
     return  [super forwardingTargetForSelector:aSelector];;
+}
+-(UIView*)findBadgeTargetView{
+    
+    UIView *_badgeView= [self valueForKey:@"_view"];
+    return _badgeView;
 }
 @end
 #pragma clang diagnostic pop
