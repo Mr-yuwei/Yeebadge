@@ -3,13 +3,13 @@
 add badgeView for UIView
 
 
-##### How to use
+### How to use
 
- *UITabBarItem
- *UIView
- *UIBarButtonItem
+ * UITabBarItem
+ * UIView
+ * UIBarButtonItem
 
-#####  author
+###  author
 
  Yee  https://www.jianshu.com/u/d50125d6fd7a
 
