@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YeeBadgeViewHeader.h"
 @interface TableViewCell : UITableViewCell
+
+-(void)configueCellBadgeStyle:(YeeBadgeStytle)style;
 
 @end

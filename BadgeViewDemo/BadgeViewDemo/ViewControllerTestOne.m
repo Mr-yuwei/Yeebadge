@@ -10,9 +10,12 @@
 #import "YeeBadgeView.h"
 #import "NSObject+IvarNSlog.h"
 #import "YeeBadgeViewHeader.h"
-@interface ViewControllerTestOne ()
+#import "TableViewCell.h"
+@interface ViewControllerTestOne ()<UITableViewDataSource,UITableViewDelegate>
 {
-    UIView *m_pContentView;
+    
+    UITableView  *m_ptableView;
+    
 }
 @end
 
@@ -23,48 +26,59 @@
     [super viewDidLoad];
     self.title=@"one";
     [self add_OwnView];
-    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setFrame:CGRectMake(0, 0, 25, 35)];
-    [btn setTitle:@"test" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    UIBarButtonItem *barItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
-    self.navigationItem.leftBarButtonItem =barItem;
-    self.tabBarItem.redDotColor =[UIColor blueColor];
-    self.tabBarItem.redDotNumber = 100;
-    [self.tabBarItem ShowBadgeView];
-    
+    UIButton *leftbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [leftbtn setFrame:CGRectMake(0, 0, 25, 35)];
+    [leftbtn setImage:[UIImage imageNamed:@"icon_my_message"] forState:UIControlStateNormal];
+    UIBarButtonItem *leftbarItem=[[UIBarButtonItem alloc] initWithCustomView:leftbtn];
+    self.navigationItem.leftBarButtonItem =leftbarItem;
     self.navigationItem.leftBarButtonItem.redDotColor =[UIColor blueColor];
     self.navigationItem.leftBarButtonItem.redDotRadius = 5.0;
+    self.navigationItem.leftBarButtonItem.redDotOffset = CGPointMake(4, +5);
     self.navigationItem.leftBarButtonItem.redDotNumber = 100;
     [self.navigationItem.leftBarButtonItem ShowBadgeView];
+    
+    UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    [rightbtn setFrame:CGRectMake(0, 0, 25, 35)];
+    [rightbtn setImage:[UIImage imageNamed:@"icon_my_message"] forState:UIControlStateNormal];
+    UIBarButtonItem *rightbarItem=[[UIBarButtonItem alloc] initWithCustomView:rightbtn];
+    self.navigationItem.rightBarButtonItem =rightbarItem;
+    self.navigationItem.rightBarButtonItem.redDotColor =[UIColor brownColor];
+    [self.navigationItem.rightBarButtonItem ShowBadgeView];
+    self.navigationItem.rightBarButtonItem.redDotOffset = CGPointMake(-5, 5);
+    
+    self.tabBarItem.redDotColor =[UIColor greenColor];
+    self.tabBarItem.redDotNumber = 100;
+    [self.tabBarItem ShowBadgeView];
     
     [NSObject PrintClassIvar:[UIBarButtonItem class]];
 }
 -(void)add_OwnView{
-    
-    m_pContentView=[[UIView alloc] initWithFrame:CGRectMake(35, 120, 100, 35)];
-    [m_pContentView setBackgroundColor:[UIColor blueColor]];
-    [m_pContentView ShowBadgeView];
-    [self.view addSubview:m_pContentView];
-    
+   
+    m_ptableView=[[UITableView alloc] initWithFrame:self.view.bounds];
+    m_ptableView.delegate = self;
+    m_ptableView.dataSource = self;
+    m_ptableView.tableFooterView =[[UIView alloc] init];
+    [m_ptableView registerClass:[TableViewCell class] forCellReuseIdentifier:NSStringFromClass([TableViewCell class])];
+    [self.view addSubview:m_ptableView];
 }
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    self.tabBarItem.redDotNumber = arc4random()%100;
+    return 3;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    TableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TableViewCell class])];
+    [cell configueCellBadgeStyle:indexPath.row];
+    return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 60;
 }
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

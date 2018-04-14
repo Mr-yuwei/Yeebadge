@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YeeBadgeProtocol.h"
 @interface UITabBarItem (YeeBadge)<YeeBadgeProtocol>
+
 @property(nonatomic,assign)CGFloat   redDotRadius;
 @property(nonatomic,assign)NSInteger redDotNumber;
 @property(nonatomic,assign)NSInteger redDotMaxNumber;

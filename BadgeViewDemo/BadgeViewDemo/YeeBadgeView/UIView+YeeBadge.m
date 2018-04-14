@@ -11,13 +11,13 @@
 #import "YeeBadgeView.h"
 #import "YeeBadgeProtocol.h"
 static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
-static NSString *Yee_BadgeViewOffsetKey= @"Yee_BadgeViewOffsetKey";
 @implementation UIView (YeeBadge)
 -(YeeBadgeView*)_yeeBadgeView{
     
     YeeBadgeView *yeeBadgeView=objc_getAssociatedObject(self, &Yee_BadgeViewKey);
     if (!yeeBadgeView) {
         yeeBadgeView=[[YeeBadgeView alloc] init];
+        yeeBadgeView.hidden=YES;
         yeeBadgeView.translatesAutoresizingMaskIntoConstraints=NO;
         [self addSubview:yeeBadgeView];
         objc_setAssociatedObject(self, &Yee_BadgeViewKey, yeeBadgeView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -26,6 +26,8 @@ static NSString *Yee_BadgeViewOffsetKey= @"Yee_BadgeViewOffsetKey";
 }
 -(void)_yeeLayoutBadgeView{
     
+    NSArray *constraintsArray=self.constraints;
+    [self removeConstraints:constraintsArray];
     NSLayoutConstraint *topConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:self.redDotOffset.y];
    NSLayoutConstraint *rightConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:self.redDotOffset.x];
     [self addConstraints:@[topConstraint,rightConstraint]];
