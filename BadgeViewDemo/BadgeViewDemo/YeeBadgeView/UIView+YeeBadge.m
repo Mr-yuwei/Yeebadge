@@ -29,6 +29,9 @@ static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
     //这里错了不应该这样做 -->应该记录下来,否则原先View自己加的constraints会被剔除
     NSArray *constraintsArray=self.constraints;
     [self removeConstraints:constraintsArray];
+    
+    
+    
     NSLayoutConstraint *topConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:self.redDotOffset.y];
    NSLayoutConstraint *rightConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:self.redDotOffset.x];
     [self addConstraints:@[topConstraint,rightConstraint]];
@@ -126,6 +129,7 @@ static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
 }
 -(void)hideBadgeView{
    
+    if ([self _yeeBadgeView].hidden==YES) return;
      [self _yeeBadgeView].hidden=YES;
 }
 @end

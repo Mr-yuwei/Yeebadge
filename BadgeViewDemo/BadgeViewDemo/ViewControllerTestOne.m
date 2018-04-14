@@ -75,6 +75,15 @@
     
     return 60;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+   [self.tabBarItem hideBadgeView];
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
