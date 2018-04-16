@@ -36,10 +36,10 @@ Support Three Style,but you don't need to know it's implementation, i  haved dea
  
  ![2018-4-14.png](https://upload-images.jianshu.io/upload_images/1488651-1e7d181761279bb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
- ### version
+ ### Version
  >  2018-4-14   1.0.2 <br>
  > 2017-7       1.0.1
-###  author
+###  Author
   Yee
  [https://www.jianshu.com/u/d50125d6fd7a](https://www.jianshu.com/u/d50125d6fd7a)
 
