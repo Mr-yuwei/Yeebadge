@@ -11,6 +11,7 @@
 #import "YeeBadgeView.h"
 #import "YeeBadgeProtocol.h"
 static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
+
 @implementation UIView (YeeBadge)
 -(YeeBadgeView*)_yeeBadgeView{
     
