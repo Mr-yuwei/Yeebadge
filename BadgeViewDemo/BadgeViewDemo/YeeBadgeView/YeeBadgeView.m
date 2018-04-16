@@ -104,6 +104,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     [self update_subViews];
 }
 -(void)setRedDotRadius:(CGFloat)redDotRadius{
+    
     if (_redDotRadius==redDotRadius||_redDotStytle!=YeeBadgeRedDotStytle) return;
     _redDotRadius = redDotRadius;
     [self update_subViews];

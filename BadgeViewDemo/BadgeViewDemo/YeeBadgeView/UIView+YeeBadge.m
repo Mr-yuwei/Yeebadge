@@ -11,7 +11,8 @@
 #import "YeeBadgeView.h"
 #import "YeeBadgeProtocol.h"
 static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
-
+static NSString *Yee_BadgeViewTopConstraintKey  = @"Yee_BadgeViewTopConstraintKey";
+static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraintKey";
 @implementation UIView (YeeBadge)
 -(YeeBadgeView*)_yeeBadgeView{
     
@@ -27,15 +28,15 @@ static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
 }
 -(void)_yeeLayoutBadgeView{
     
-    //这里错了不应该这样做 -->应该记录下来,否则原先View自己加的constraints会被剔除
-    NSArray *constraintsArray=self.constraints;
-    [self removeConstraints:constraintsArray];
-    
-    
-    
-    NSLayoutConstraint *topConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:self.redDotOffset.y];
-   NSLayoutConstraint *rightConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:self.redDotOffset.x];
+    NSLayoutConstraint *topConstraint   = objc_getAssociatedObject(self, &Yee_BadgeViewTopConstraintKey);
+    NSLayoutConstraint *rightConstraint = objc_getAssociatedObject(self, &Yee_BadgeViewRightConstraintKey);
+    if (topConstraint)   [self removeConstraint:topConstraint];
+    if (rightConstraint) [self removeConstraint:rightConstraint];
+    topConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:self.redDotOffset.y];
+    rightConstraint=[NSLayoutConstraint constraintWithItem:[self _yeeBadgeView] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:self.redDotOffset.x];
     [self addConstraints:@[topConstraint,rightConstraint]];
+    objc_setAssociatedObject(self, &Yee_BadgeViewTopConstraintKey,topConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &Yee_BadgeViewRightConstraintKey,rightConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(void)setRedDotRadius:(CGFloat)redDotRadius{
     
