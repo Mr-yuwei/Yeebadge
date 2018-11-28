@@ -2,7 +2,9 @@
 # Yeebadge
 ![](https://img.shields.io/cocoapods/p/YeeBadgeView.svg?style=flat)![](https://img.shields.io/badge/language-objc-orange.svg)
 ![](https://img.shields.io/cocoapods/v/YeeBadgeView.svg?style=flat)
-![](https://img.shields.io/cocoapods/l/YeeBadgeView.svg)
+![](https://img.shields.io/cocoapods/l/YeeBadgeView.svg) <br>
+
+
 add badgeView for UIView
 
 ### OverView
@@ -15,7 +17,9 @@ Support Three Style,but you don't need to know it's implementation, i  haved dea
   
 ### How to use
 
-```pod 'YeeBadgeView', '~> 0.0.3'
+```
+ pod 'YeeBadgeView', '~> 0.0.3'
+ 
 ```
 
 
