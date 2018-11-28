@@ -15,6 +15,10 @@ Support Three Style,but you don't need to know it's implementation, i  haved dea
   
 ### How to use
 
+```pod 'YeeBadgeView', '~> 0.0.3'
+```
+
+
  * UITabBarItem
  ```
  self.tabBarItem.redDotColor =[UIColor blueColor];
