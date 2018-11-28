@@ -19,7 +19,6 @@ Support Three Style,but you don't need to know it's implementation, i  haved dea
 
 ```
  pod 'YeeBadgeView', '~> 0.0.3'
- 
 ```
 
 
