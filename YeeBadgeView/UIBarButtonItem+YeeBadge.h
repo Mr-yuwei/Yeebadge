@@ -1,6 +1,6 @@
 //
 //  UIBarButtonItem+YeeBadge.h
-//  BadgeViewDemo
+//  YeeBadgeView
 //
 //  Created by Yee on 2018/4/13.
 //  Copyright © 2018年 Yee. All rights reserved.
@@ -18,7 +18,7 @@
 @property(nonatomic,retain)UIFont    *redDotTextFont;
 @property(nonatomic,assign)CGPoint   redDotOffset;   // default is (0.0)
 // show badgeView
--(void)ShowBadgeView;
+- (void)ShowBadgeView;
 // hiden badgeView
--(void)hideBadgeView;
+- (void)hideBadgeView;
 @end

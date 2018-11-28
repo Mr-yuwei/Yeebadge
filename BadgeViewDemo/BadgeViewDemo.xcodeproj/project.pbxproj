@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881EB5FE21AE2D1B00A8F686 /* YeeBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 881EB5F921AE2D1B00A8F686 /* YeeBadgeView.m */; };
+		881EB5FF21AE2D1B00A8F686 /* UITabBarItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 881EB5FA21AE2D1B00A8F686 /* UITabBarItem+YeeBadge.m */; };
+		881EB60021AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 881EB5FC21AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.m */; };
+		881EB60121AE2D1B00A8F686 /* UIView+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 881EB5FD21AE2D1B00A8F686 /* UIView+YeeBadge.m */; };
 		885164C52081E5F20099559D /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 885164C42081E5F20099559D /* TableViewCell.m */; };
 		886B913720803AF400392854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B913620803AF400392854 /* AppDelegate.m */; };
 		886B913A20803AF400392854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B913920803AF400392854 /* ViewController.m */; };
@@ -18,18 +22,6 @@
 		886B916920803B3C00392854 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B916820803B3C00392854 /* TabBarViewController.m */; };
 		886B916A20803B3C00392854 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B916820803B3C00392854 /* TabBarViewController.m */; };
 		886B916B20803B3C00392854 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B916820803B3C00392854 /* TabBarViewController.m */; };
-		886B916F20803C8600392854 /* YeeBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B916E20803C8600392854 /* YeeBadgeView.m */; };
-		886B917020803C8600392854 /* YeeBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B916E20803C8600392854 /* YeeBadgeView.m */; };
-		886B917120803C8600392854 /* YeeBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B916E20803C8600392854 /* YeeBadgeView.m */; };
-		886B917420803CFD00392854 /* UIView+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917320803CFD00392854 /* UIView+YeeBadge.m */; };
-		886B917520803CFD00392854 /* UIView+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917320803CFD00392854 /* UIView+YeeBadge.m */; };
-		886B917620803CFD00392854 /* UIView+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917320803CFD00392854 /* UIView+YeeBadge.m */; };
-		886B917920803D1B00392854 /* UIBarButtonItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917820803D1B00392854 /* UIBarButtonItem+YeeBadge.m */; };
-		886B917A20803D1B00392854 /* UIBarButtonItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917820803D1B00392854 /* UIBarButtonItem+YeeBadge.m */; };
-		886B917B20803D1B00392854 /* UIBarButtonItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917820803D1B00392854 /* UIBarButtonItem+YeeBadge.m */; };
-		886B917E20803D3600392854 /* UITabBarItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917D20803D3600392854 /* UITabBarItem+YeeBadge.m */; };
-		886B917F20803D3600392854 /* UITabBarItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917D20803D3600392854 /* UITabBarItem+YeeBadge.m */; };
-		886B918020803D3600392854 /* UITabBarItem+YeeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B917D20803D3600392854 /* UITabBarItem+YeeBadge.m */; };
 		886B91832080514400392854 /* ViewControllerTestOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B91822080514400392854 /* ViewControllerTestOne.m */; };
 		886B91842080514400392854 /* ViewControllerTestOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B91822080514400392854 /* ViewControllerTestOne.m */; };
 		886B91852080514400392854 /* ViewControllerTestOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B91822080514400392854 /* ViewControllerTestOne.m */; };
@@ -59,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		881EB5F421AE2D1B00A8F686 /* YeeBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeBadgeView.h; sourceTree = "<group>"; };
+		881EB5F521AE2D1B00A8F686 /* UITabBarItem+YeeBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+YeeBadge.h"; sourceTree = "<group>"; };
+		881EB5F621AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+YeeBadge.h"; sourceTree = "<group>"; };
+		881EB5F721AE2D1B00A8F686 /* UIView+YeeBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YeeBadge.h"; sourceTree = "<group>"; };
+		881EB5F821AE2D1B00A8F686 /* YeeBadgeViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeBadgeViewHeader.h; sourceTree = "<group>"; };
+		881EB5F921AE2D1B00A8F686 /* YeeBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YeeBadgeView.m; sourceTree = "<group>"; };
+		881EB5FA21AE2D1B00A8F686 /* UITabBarItem+YeeBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+YeeBadge.m"; sourceTree = "<group>"; };
+		881EB5FB21AE2D1B00A8F686 /* YeeBadgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeeBadgeProtocol.h; sourceTree = "<group>"; };
+		881EB5FC21AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YeeBadge.m"; sourceTree = "<group>"; };
+		881EB5FD21AE2D1B00A8F686 /* UIView+YeeBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YeeBadge.m"; sourceTree = "<group>"; };
 		885164C32081E5F20099559D /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		885164C42081E5F20099559D /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		886B913220803AF400392854 /* BadgeViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,22 +80,12 @@
 		886B915B20803AF400392854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886B916720803B3C00392854 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		886B916820803B3C00392854 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		886B916D20803C8600392854 /* YeeBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YeeBadgeView.h; sourceTree = "<group>"; };
-		886B916E20803C8600392854 /* YeeBadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YeeBadgeView.m; sourceTree = "<group>"; };
-		886B917220803CFD00392854 /* UIView+YeeBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YeeBadge.h"; sourceTree = "<group>"; };
-		886B917320803CFD00392854 /* UIView+YeeBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YeeBadge.m"; sourceTree = "<group>"; };
-		886B917720803D1B00392854 /* UIBarButtonItem+YeeBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+YeeBadge.h"; sourceTree = "<group>"; };
-		886B917820803D1B00392854 /* UIBarButtonItem+YeeBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YeeBadge.m"; sourceTree = "<group>"; };
-		886B917C20803D3600392854 /* UITabBarItem+YeeBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+YeeBadge.h"; sourceTree = "<group>"; };
-		886B917D20803D3600392854 /* UITabBarItem+YeeBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+YeeBadge.m"; sourceTree = "<group>"; };
 		886B91812080514400392854 /* ViewControllerTestOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerTestOne.h; sourceTree = "<group>"; };
 		886B91822080514400392854 /* ViewControllerTestOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTestOne.m; sourceTree = "<group>"; };
 		886B9186208051AB00392854 /* ViewControllerTestTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerTestTwo.h; sourceTree = "<group>"; };
 		886B9187208051AB00392854 /* ViewControllerTestTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTestTwo.m; sourceTree = "<group>"; };
 		886B918B2080A10500392854 /* NSObject+IvarNSlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+IvarNSlog.h"; sourceTree = "<group>"; };
 		886B918C2080A10500392854 /* NSObject+IvarNSlog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IvarNSlog.m"; sourceTree = "<group>"; };
-		886B91902080B8DA00392854 /* YeeBadgeViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YeeBadgeViewHeader.h; sourceTree = "<group>"; };
-		88ABD2F4208198A4009CC7FC /* YeeBadgeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YeeBadgeProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +113,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		881EB5F321AE2D1B00A8F686 /* YeeBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				881EB5FB21AE2D1B00A8F686 /* YeeBadgeProtocol.h */,
+				881EB5F821AE2D1B00A8F686 /* YeeBadgeViewHeader.h */,
+				881EB5F421AE2D1B00A8F686 /* YeeBadgeView.h */,
+				881EB5F921AE2D1B00A8F686 /* YeeBadgeView.m */,
+				881EB5F721AE2D1B00A8F686 /* UIView+YeeBadge.h */,
+				881EB5FD21AE2D1B00A8F686 /* UIView+YeeBadge.m */,
+				881EB5FA21AE2D1B00A8F686 /* UITabBarItem+YeeBadge.m */,
+				881EB5F521AE2D1B00A8F686 /* UITabBarItem+YeeBadge.h */,
+				881EB5F621AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.h */,
+				881EB5FC21AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.m */,
+			);
+			name = YeeBadgeView;
+			path = ../YeeBadgeView;
+			sourceTree = "<group>";
+		};
 		886B912920803AF400392854 = {
 			isa = PBXGroup;
 			children = (
+				881EB5F321AE2D1B00A8F686 /* YeeBadgeView */,
 				886B913420803AF400392854 /* BadgeViewDemo */,
 				886B914D20803AF400392854 /* BadgeViewDemoTests */,
 				886B915820803AF400392854 /* BadgeViewDemoUITests */,
@@ -144,7 +155,6 @@
 		886B913420803AF400392854 /* BadgeViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				886B916C20803C6200392854 /* YeeBadgeView */,
 				886B916720803B3C00392854 /* TabBarViewController.h */,
 				886B916820803B3C00392854 /* TabBarViewController.m */,
 				885164C32081E5F20099559D /* TableViewCell.h */,
@@ -183,23 +193,6 @@
 				886B915B20803AF400392854 /* Info.plist */,
 			);
 			path = BadgeViewDemoUITests;
-			sourceTree = "<group>";
-		};
-		886B916C20803C6200392854 /* YeeBadgeView */ = {
-			isa = PBXGroup;
-			children = (
-				886B91902080B8DA00392854 /* YeeBadgeViewHeader.h */,
-				88ABD2F4208198A4009CC7FC /* YeeBadgeProtocol.h */,
-				886B916D20803C8600392854 /* YeeBadgeView.h */,
-				886B916E20803C8600392854 /* YeeBadgeView.m */,
-				886B917220803CFD00392854 /* UIView+YeeBadge.h */,
-				886B917320803CFD00392854 /* UIView+YeeBadge.m */,
-				886B917720803D1B00392854 /* UIBarButtonItem+YeeBadge.h */,
-				886B917820803D1B00392854 /* UIBarButtonItem+YeeBadge.m */,
-				886B917C20803D3600392854 /* UITabBarItem+YeeBadge.h */,
-				886B917D20803D3600392854 /* UITabBarItem+YeeBadge.m */,
-			);
-			path = YeeBadgeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,18 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				886B917420803CFD00392854 /* UIView+YeeBadge.m in Sources */,
+				881EB5FF21AE2D1B00A8F686 /* UITabBarItem+YeeBadge.m in Sources */,
 				885164C52081E5F20099559D /* TableViewCell.m in Sources */,
 				886B916920803B3C00392854 /* TabBarViewController.m in Sources */,
 				886B913A20803AF400392854 /* ViewController.m in Sources */,
 				886B914520803AF400392854 /* main.m in Sources */,
-				886B917E20803D3600392854 /* UITabBarItem+YeeBadge.m in Sources */,
 				886B9188208051AB00392854 /* ViewControllerTestTwo.m in Sources */,
-				886B917920803D1B00392854 /* UIBarButtonItem+YeeBadge.m in Sources */,
+				881EB60121AE2D1B00A8F686 /* UIView+YeeBadge.m in Sources */,
+				881EB60021AE2D1B00A8F686 /* UIBarButtonItem+YeeBadge.m in Sources */,
 				886B913720803AF400392854 /* AppDelegate.m in Sources */,
-				886B916F20803C8600392854 /* YeeBadgeView.m in Sources */,
 				886B918D2080A10500392854 /* NSObject+IvarNSlog.m in Sources */,
 				886B91832080514400392854 /* ViewControllerTestOne.m in Sources */,
+				881EB5FE21AE2D1B00A8F686 /* YeeBadgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,13 +348,9 @@
 			files = (
 				886B916A20803B3C00392854 /* TabBarViewController.m in Sources */,
 				886B918E2080A10500392854 /* NSObject+IvarNSlog.m in Sources */,
-				886B917A20803D1B00392854 /* UIBarButtonItem+YeeBadge.m in Sources */,
 				886B914F20803AF400392854 /* BadgeViewDemoTests.m in Sources */,
 				886B9189208051AB00392854 /* ViewControllerTestTwo.m in Sources */,
-				886B917520803CFD00392854 /* UIView+YeeBadge.m in Sources */,
-				886B917F20803D3600392854 /* UITabBarItem+YeeBadge.m in Sources */,
 				886B91842080514400392854 /* ViewControllerTestOne.m in Sources */,
-				886B917020803C8600392854 /* YeeBadgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,13 +360,9 @@
 			files = (
 				886B916B20803B3C00392854 /* TabBarViewController.m in Sources */,
 				886B918F2080A10500392854 /* NSObject+IvarNSlog.m in Sources */,
-				886B917B20803D1B00392854 /* UIBarButtonItem+YeeBadge.m in Sources */,
 				886B915A20803AF400392854 /* BadgeViewDemoUITests.m in Sources */,
 				886B918A208051AB00392854 /* ViewControllerTestTwo.m in Sources */,
-				886B917620803CFD00392854 /* UIView+YeeBadge.m in Sources */,
-				886B918020803D3600392854 /* UITabBarItem+YeeBadge.m in Sources */,
 				886B91852080514400392854 /* ViewControllerTestOne.m in Sources */,
-				886B917120803C8600392854 /* YeeBadgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

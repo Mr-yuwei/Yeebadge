@@ -1,6 +1,6 @@
 //
 //  YeeBadgeView.m
-//  BadgeViewDemo
+//  YeeBadgeView
 //
 //  Created by Yee on 2018/4/13.
 //  Copyright © 2018年 Yee. All rights reserved.
@@ -34,7 +34,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
 @end
 @implementation YeeBadgeView
 
--(instancetype)init{
+- (instancetype)init{
     
     if (self=[super init]) {
        
@@ -42,7 +42,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     }
     return self;
 }
--(instancetype)initWithCoder:(NSCoder *)aDecoder{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
     
     if (self=[super initWithCoder:aDecoder]) {
         
@@ -50,7 +50,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     }
     return self;
 }
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame{
     
     if (self=[super initWithFrame:frame]) {
         
@@ -58,7 +58,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     }
     return self;
 }
--(void)initConfigureView{
+- (void)initConfigureView{
     
     _redDotStytle    =YeeBadgeRedDotStytle;
     _redDotRadius    =3.0;
@@ -74,13 +74,13 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     [self update_subViews];
 }
 #pragma mark  add_SubViews
--(void)add_SubViews
+- (void)add_SubViews
 {    
     [self addSubview:self.m_pBadgeImageView];
     [self addSubview:self.m_pBadgeLable];
 }
 #pragma mark  update_subViews
--(void)update_subViews{
+- (void)update_subViews{
     
     switch (_redDotStytle) {
         case YeeBadgeRedDotStytle:
@@ -98,23 +98,23 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
         break;
     }
 }
--(void)setRedDotStytle:(YeeBadgeStytle)redDotStytle{
+- (void)setRedDotStytle:(YeeBadgeStytle)redDotStytle{
     if (_redDotStytle ==redDotStytle) return;
      _redDotStytle = redDotStytle;
     [self update_subViews];
 }
--(void)setRedDotRadius:(CGFloat)redDotRadius{
+- (void)setRedDotRadius:(CGFloat)redDotRadius{
     
     if (_redDotRadius==redDotRadius||_redDotStytle!=YeeBadgeRedDotStytle) return;
     _redDotRadius = redDotRadius;
     [self update_subViews];
 }
--(void)setRedDotColor:(UIColor *)redDotColor{
+- (void)setRedDotColor:(UIColor *)redDotColor{
     if (_redDotColor ==redDotColor) return;
     _redDotColor = redDotColor;
      [self update_subViews];
 }
--(void)setRedDotNumber:(NSInteger)redDotNumber{
+- (void)setRedDotNumber:(NSInteger)redDotNumber{
     if (_redDotNumber==redDotNumber)return;
     _redDotStytle = YeeBadgeNumberStytle;
     _redDotNumber = redDotNumber;
@@ -127,7 +127,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
      self.m_pBadgeLable.font = _redDotTextFont;
      [self update_subViews];
 }
--(void)setRedDotText:(NSString *)redDotText{
+- (void)setRedDotText:(NSString *)redDotText{
     
     if ([_redDotText isEqualToString:redDotText]||redDotText.length==0) return;
        _redDotStytle = YeeBadgeTextStytle;
@@ -135,12 +135,12 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
        self.m_pBadgeLable.text =[NSString stringWithFormat:@"%@",redDotText];
        [self update_subViews];
 }
--(void)setRedDotTextColor:(UIColor *)redDotTextColor{
+- (void)setRedDotTextColor:(UIColor *)redDotTextColor{
     _redDotTextColor = redDotTextColor;
     self.m_pBadgeLable.textColor  = _redDotTextColor;
 }
 #pragma mark  make_SubViewLayout
--(void)make_SubViewLayout{
+- (void)make_SubViewLayout{
     
     NSLayoutConstraint *LableViewcenterXlayoutConstraint=[NSLayoutConstraint  constraintWithItem:self.m_pBadgeLable attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
     NSLayoutConstraint *LableViewcenterYlayoutConstraint=[NSLayoutConstraint  constraintWithItem:self.m_pBadgeLable attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
@@ -149,7 +149,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     [self addConstraints:@[ImageViewcenterXlayoutConstraint,ImageViewcenterYlayoutConstraint,LableViewcenterXlayoutConstraint,LableViewcenterYlayoutConstraint]];
 }
 #pragma mark  lazy method
--(UIImageView*)m_pBadgeImageView{
+- (UIImageView*)m_pBadgeImageView{
     
     if (!_m_pBadgeImageView) {
         _m_pBadgeImageView=[[UIImageView alloc] init];
@@ -158,7 +158,7 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     }
     return _m_pBadgeImageView;
 }
--(UILabel*)m_pBadgeLable{
+- (UILabel*)m_pBadgeLable{
     
     if (!_m_pBadgeLable) {
         _m_pBadgeLable=[[UILabel alloc] init];

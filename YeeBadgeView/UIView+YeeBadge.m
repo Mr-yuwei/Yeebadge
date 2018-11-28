@@ -1,6 +1,6 @@
 //
 //  UIView+YeeBadge.m
-//  BadgeViewDemo
+//  YeeBadgeView
 //
 //  Created by Yee on 2018/4/13.
 //  Copyright © 2018年 Yee. All rights reserved.
@@ -14,7 +14,7 @@ static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
 static NSString *Yee_BadgeViewTopConstraintKey  = @"Yee_BadgeViewTopConstraintKey";
 static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraintKey";
 @implementation UIView (YeeBadge)
--(YeeBadgeView*)_yeeBadgeView{
+- (YeeBadgeView*)_yeeBadgeView{
     
     YeeBadgeView *yeeBadgeView=objc_getAssociatedObject(self, &Yee_BadgeViewKey);
     if (!yeeBadgeView) {
@@ -26,7 +26,7 @@ static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraint
     }
     return yeeBadgeView;
 }
--(void)_yeeLayoutBadgeView{
+- (void)_yeeLayoutBadgeView{
     
     NSLayoutConstraint *topConstraint   = objc_getAssociatedObject(self, &Yee_BadgeViewTopConstraintKey);
     NSLayoutConstraint *rightConstraint = objc_getAssociatedObject(self, &Yee_BadgeViewRightConstraintKey);
@@ -38,35 +38,35 @@ static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraint
     objc_setAssociatedObject(self, &Yee_BadgeViewTopConstraintKey,topConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(self, &Yee_BadgeViewRightConstraintKey,rightConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
--(void)setRedDotRadius:(CGFloat)redDotRadius{
+- (void)setRedDotRadius:(CGFloat)redDotRadius{
     
     [self _yeeBadgeView].redDotRadius =redDotRadius;
 }
--(CGFloat)redDotRadius{
+- (CGFloat)redDotRadius{
     
     return [self _yeeBadgeView].redDotRadius;
 }
--(void)setRedDotNumber:(NSInteger)redDotNumber{
+- (void)setRedDotNumber:(NSInteger)redDotNumber{
     if (redDotNumber==0) {
         
         [self hideBadgeView];
     }
     [self _yeeBadgeView].redDotNumber =redDotNumber;
 }
--(NSInteger)redDotNumber{
+- (NSInteger)redDotNumber{
     
     return  [self _yeeBadgeView].redDotNumber;
 }
--(void)setRedDotMaxNumber:(NSInteger)redDotMaxNumber{
+- (void)setRedDotMaxNumber:(NSInteger)redDotMaxNumber{
     
     if (redDotMaxNumber==0) return;
     [self _yeeBadgeView].redDotMaxNumber =redDotMaxNumber;
 }
--(NSInteger)redDotMaxNumber{
+- (NSInteger)redDotMaxNumber{
 
      return  [self _yeeBadgeView].redDotMaxNumber;
 }
--(void)setRedDotColor:(UIColor *)redDotColor{
+- (void)setRedDotColor:(UIColor *)redDotColor{
     
     if (redDotColor==nil) {
         
@@ -74,11 +74,11 @@ static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraint
     }
     [self _yeeBadgeView].redDotColor =redDotColor;
 }
--(UIColor*)redDotColor{
+- (UIColor*)redDotColor{
     
     return  [self _yeeBadgeView].redDotColor;
 }
--(void)setRedDotText:(NSString *)redDotText{
+- (void)setRedDotText:(NSString *)redDotText{
     
     if (redDotText.length==0) {
         
@@ -86,42 +86,42 @@ static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraint
     }
     [self _yeeBadgeView].redDotText = redDotText;
 }
--(NSString*)redDotText{
+- (NSString*)redDotText{
     
     return [self  _yeeBadgeView].redDotText;
 }
--(void)setRedDotTextColor:(UIColor *)redDotTextColor{
+- (void)setRedDotTextColor:(UIColor *)redDotTextColor{
     
     if (redDotTextColor==nil) {
         redDotTextColor=[UIColor whiteColor];
     }
     [self _yeeBadgeView].redDotTextColor =redDotTextColor;
 }
--(UIColor*)redDotTextColor{
+- (UIColor*)redDotTextColor{
     
     return [self _yeeBadgeView].redDotTextColor;
 }
--(void)setRedDotTextFont:(UIFont *)redDotTextFont{
+- (void)setRedDotTextFont:(UIFont *)redDotTextFont{
     
     if (redDotTextFont==nil) {
         redDotTextFont=[UIFont systemFontOfSize:12];
     }
     [self _yeeBadgeView].redDotTextFont = redDotTextFont;
 }
--(UIFont*)redDotTextFont{
+- (UIFont*)redDotTextFont{
     
     return  [self _yeeBadgeView].redDotTextFont;
 }
--(void)setRedDotOffset:(CGPoint)redDotOffset{
+- (void)setRedDotOffset:(CGPoint)redDotOffset{
     
     [self _yeeBadgeView].redDotOffset = redDotOffset;
     [self _yeeLayoutBadgeView];
 }
--(CGPoint)redDotOffset{
+- (CGPoint)redDotOffset{
  
     return [self _yeeBadgeView].redDotOffset;
 }
--(void)ShowBadgeView{
+- (void)ShowBadgeView{
     
     if ([self _yeeBadgeView].hidden==YES) {
         
@@ -129,7 +129,7 @@ static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraint
     }
     [self _yeeLayoutBadgeView];
 }
--(void)hideBadgeView{
+- (void)hideBadgeView{
    
     if ([self _yeeBadgeView].hidden==YES) return;
      [self _yeeBadgeView].hidden=YES;
