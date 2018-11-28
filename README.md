@@ -1,10 +1,8 @@
 
+# Yeebadge
 ![](https://img.shields.io/cocoapods/p/YeeBadgeView.svg?style=flat)![](https://img.shields.io/badge/language-objc-orange.svg)
 ![](https://img.shields.io/cocoapods/v/YeeBadgeView.svg?style=flat)
 ![](https://img.shields.io/cocoapods/l/YeeBadgeView.svg)
-
-# Yeebadge
-
 add badgeView for UIView
 
 ### OverView
