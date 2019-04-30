@@ -17,7 +17,6 @@
 @property(nonatomic,retain)UIColor   *redDotTextColor;
 @property(nonatomic,retain)UIFont    *redDotTextFont;
 @property(nonatomic,assign)CGPoint   redDotOffset;   // default is (0.0)
-
 @property(nonatomic,assign)CGFloat   redDotBorderWidth;
 @property(nonatomic,retain)UIColor   *redDotBorderColor;
 // show badgeView

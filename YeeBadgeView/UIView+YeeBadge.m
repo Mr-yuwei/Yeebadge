@@ -13,6 +13,8 @@
 static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
 static NSString *Yee_BadgeViewTopConstraintKey  = @"Yee_BadgeViewTopConstraintKey";
 static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraintKey";
+static NSString *Yee_BadgeViewRedBorderWidthKey = @"Yee_BadgeViewRedBorderWidthKey";
+static NSString *Yee_BadgeViewRedBorderColorKey = @"Yee_BadgeViewRedBorderColorKey";
 @implementation UIView (YeeBadge)
 - (YeeBadgeView*)_yeeBadgeView{
     
@@ -121,6 +123,26 @@ static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraint
  
     return [self _yeeBadgeView].redDotOffset;
 }
+
+- (void)setRedDotBorderColor:(UIColor *)redDotBorderColor{
+    objc_setAssociatedObject(self, &Yee_BadgeViewRedBorderColorKey, redDotBorderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self _yeeBadgeView].redDotBoderColor = redDotBorderColor;
+}
+
+-(UIColor *)redDotBorderColor{
+    return objc_getAssociatedObject(self, &Yee_BadgeViewRedBorderColorKey);
+    
+}
+
+- (void)setRedDotBorderWidth:(CGFloat)redDotBorderWidth{
+    objc_setAssociatedObject(self, &Yee_BadgeViewRedBorderWidthKey, [NSNumber numberWithFloat:redDotBorderWidth], OBJC_ASSOCIATION_ASSIGN);
+    [self _yeeBadgeView].redDotBorderWith = redDotBorderWidth;
+}
+
+- (CGFloat)redDotBorderWidth{
+    return [objc_getAssociatedObject(self, &Yee_BadgeViewRedBorderWidthKey) floatValue];
+}
+
 - (void)ShowBadgeView{
     
     if ([self _yeeBadgeView].hidden==YES) {

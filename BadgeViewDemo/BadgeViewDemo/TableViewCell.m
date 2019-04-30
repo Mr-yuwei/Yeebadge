@@ -57,6 +57,8 @@
         case YeeBadgeNumberStytle:
         {
             m_pImageView.redDotNumber= 20;
+            m_pImageView.redDotBorderWidth = 1.0;
+            m_pImageView.redDotBorderColor = [UIColor magentaColor];
             [m_pImageView  ShowBadgeView];
         }
             break;

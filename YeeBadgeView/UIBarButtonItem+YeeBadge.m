@@ -9,10 +9,7 @@
 #import "UIBarButtonItem+YeeBadge.h"
 #include <objc/runtime.h>
 #import "UIView+YeeBadge.h"
-#import "YeeBadgeView.h"
 
-static NSString *Yee_BadgeViewRedBorderWidthKey= @"Yee_BadgeViewRedBorderWidthKey";
-static NSString *Yee_BadgeViewRedBorderColorKey  = @"Yee_BadgeViewRedBorderColorKey";
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-property-implementation"
 #pragma clang diagnostic push
@@ -33,33 +30,17 @@ static NSString *Yee_BadgeViewRedBorderColorKey  = @"Yee_BadgeViewRedBorderColor
     return _badgeView;
 }
 - (void)setRedDotBorderColor:(UIColor *)redDotBorderColor{
-    objc_setAssociatedObject(self, &Yee_BadgeViewRedBorderColorKey, redDotBorderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [[self findBadgeTargetView] _yeeBadgeView].redDotBoderColor = redDotBorderColor;
+    [self findBadgeTargetView].redDotBorderColor = redDotBorderColor;
 }
-
--(UIColor *)redDotBorderColor{
-    return objc_getAssociatedObject(self, &Yee_BadgeViewRedBorderColorKey);
-    
+- (UIColor *)redDotBorderColor{
+    return [self findBadgeTargetView].redDotBorderColor;
 }
 
 - (void)setRedDotBorderWidth:(CGFloat)redDotBorderWidth{
-    objc_setAssociatedObject(self, &Yee_BadgeViewRedBorderWidthKey, [NSNumber numberWithFloat:redDotBorderWidth], OBJC_ASSOCIATION_ASSIGN);
-    [[self findBadgeTargetView] _yeeBadgeView].redDotBorderWith = redDotBorderWidth;
+    [self findBadgeTargetView].redDotBorderWidth = redDotBorderWidth;
 }
-
 - (CGFloat)redDotBorderWidth{
-    return [objc_getAssociatedObject(self, &Yee_BadgeViewRedBorderWidthKey) floatValue];
-}
-
-
-- (void)hideBadgeView{
-    [[self findBadgeTargetView] hideBadgeView];
-    
-}
-
-- (void)ShowBadgeView{
-    
-    [[self findBadgeTargetView] ShowBadgeView];
+    return [self findBadgeTargetView].redDotBorderWidth;
 }
 
 @end
