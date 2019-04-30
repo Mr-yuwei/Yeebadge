@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YeeBadgeProtocol.h"
+@class YeeBadgeView;
 @interface UIView (YeeBadge)<YeeBadgeProtocol>
 @property(nonatomic,assign)CGFloat   redDotRadius;
 @property(nonatomic,assign)NSInteger redDotNumber;
@@ -17,6 +18,7 @@
 @property(nonatomic,retain)UIColor   *redDotTextColor;
 @property(nonatomic,retain)UIFont    *redDotTextFont;
 @property(nonatomic,assign)CGPoint   redDotOffset;   // default is (0.0)
+- (YeeBadgeView*)_yeeBadgeView;
 // show badgeView
 - (void)ShowBadgeView;
 // hiden badgeView
