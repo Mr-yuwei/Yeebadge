@@ -8,6 +8,8 @@
 
 #import "UITabBarItem+YeeBadge.h"
 #include <objc/runtime.h>
+#import "UIView+YeeBadge.h"
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-property-implementation"
 #pragma clang diagnostic push
@@ -33,6 +35,20 @@
     }
     return _badgeView;
 }
+- (void)setRedDotBorderColor:(UIColor *)redDotBorderColor{
+    [self findBadgeTargetView].redDotBorderColor = redDotBorderColor;
+}
+- (UIColor *)redDotBorderColor{
+    return [self findBadgeTargetView].redDotBorderColor;
+}
+
+- (void)setRedDotBorderWidth:(CGFloat)redDotBorderWidth{
+    [self findBadgeTargetView].redDotBorderWidth = redDotBorderWidth;
+}
+- (CGFloat)redDotBorderWidth{
+    return [self findBadgeTargetView].redDotBorderWidth;
+}
+
 @end
 
 #pragma clang diagnostic pop

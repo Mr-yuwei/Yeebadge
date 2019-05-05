@@ -8,22 +8,47 @@
 
 #import "YeeBadgeView.h"
 
-static UIImage *_circleDotImage(CGFloat redDotRadius,UIColor  *redDotColor){
+static UIImage *_circleDotImage(CGFloat redDotRadius,CGFloat borderWidth,UIColor *borderColor,UIColor  *redDotColor){
+    UIEdgeInsets inset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
+    CGSize contextSize = CGSizeMake(redDotRadius * 2, redDotRadius * 2);
+    CGRect bezilPathFrame = CGRectMake(inset.left, inset.top,contextSize.width - inset.left - inset.right, contextSize.height - inset.top - inset.bottom);
     
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(redDotRadius*2,redDotRadius*2),NO, [UIScreen mainScreen].scale);
-    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0,redDotRadius*2,redDotRadius*2) cornerRadius:redDotRadius];
+    UIGraphicsBeginImageContextWithOptions(contextSize,NO, [UIScreen mainScreen].scale);
+    CAShapeLayer *roundRecttangleLayer = [CAShapeLayer layer];
+    roundRecttangleLayer.path = [UIBezierPath bezierPathWithRoundedRect:bezilPathFrame cornerRadius:bezilPathFrame.size.height * 0.5].CGPath;
     [redDotColor setFill];
-    [roundedRectanglePath fill];
+    [roundRecttangleLayer setFillColor:redDotColor.CGColor];
+    [roundRecttangleLayer setLineWidth:borderWidth];
+    [roundRecttangleLayer setStrokeColor:borderColor.CGColor];
+    [roundRecttangleLayer renderInContext:UIGraphicsGetCurrentContext()];
+    roundRecttangleLayer.shouldRasterize = YES;
+    roundRecttangleLayer.contentsScale = [UIScreen mainScreen].scale;
+
     UIImage *image= UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
 }
-static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CGSize lableSize){
+static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,CGFloat borderWidth,UIColor *borderColor,UIColor  *redDotColor , CGSize lableSize){
+    CGFloat overflowDeltaWidth = 6;
+    //防止线条锯齿问题 ref : https://blog.csdn.net/u010124617/article/details/46127743
+    UIEdgeInsets inset = UIEdgeInsetsMake(0.5, 0.5, 0.5, 0.5);
+    CGSize contextSize = CGSizeMake(lableSize.width + overflowDeltaWidth, lableSize.height);
     
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(lableSize.width+5,lableSize.height),NO, [UIScreen mainScreen].scale);
-    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, lableSize.width+5, lableSize.height) cornerRadius:redDotRadius];
+    CGRect bezilPathFrame = CGRectMake(inset.left, inset.top,contextSize.width - inset.left - inset.right, contextSize.height - inset.top - inset.bottom);
+    UIGraphicsBeginImageContextWithOptions(contextSize,NO, [UIScreen mainScreen].scale);
+    
+    
+    CAShapeLayer *roundRecttangleLayer = [CAShapeLayer layer];
+    roundRecttangleLayer.path = [UIBezierPath bezierPathWithRoundedRect:bezilPathFrame cornerRadius:redDotRadius].CGPath;
     [redDotColor setFill];
-    [roundedRectanglePath fill];
+    [roundRecttangleLayer setFillColor:redDotColor.CGColor];
+    [roundRecttangleLayer setLineWidth:borderWidth];
+    [roundRecttangleLayer setStrokeColor:borderColor.CGColor];
+    [roundRecttangleLayer renderInContext:UIGraphicsGetCurrentContext()];
+    roundRecttangleLayer.lineCap = kCALineCapRound;
+    roundRecttangleLayer.shouldRasterize = YES;
+    roundRecttangleLayer.contentsScale = [UIScreen mainScreen].scale;
+
     UIImage *image= UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
@@ -86,14 +111,14 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
         case YeeBadgeRedDotStytle:
         {
             self.m_pBadgeLable.hidden=YES;
-            self.m_pBadgeImageView.image = _circleDotImage(_redDotRadius,_redDotColor);
+            self.m_pBadgeImageView.image = _circleDotImage(_redDotRadius, _redDotBorderWith, _redDotBoderColor, _redDotColor);
         }
             break;
         default:
         {
             [self.m_pBadgeLable sizeToFit];
             self.m_pBadgeLable.hidden=NO;
-            self.m_pBadgeImageView.image = _yeeRedDotImage(self.m_pBadgeLable.frame.size.height, _redDotColor,self.m_pBadgeLable.frame.size);
+            self.m_pBadgeImageView.image = _yeeRedDotImage(self.m_pBadgeLable.frame.size.height, _redDotBorderWith, _redDotBoderColor, _redDotColor,self.m_pBadgeLable.frame.size);
         }
         break;
     }
@@ -139,6 +164,18 @@ static UIImage  *_yeeRedDotImage(CGFloat redDotRadius,UIColor  *redDotColor , CG
     _redDotTextColor = redDotTextColor;
     self.m_pBadgeLable.textColor  = _redDotTextColor;
 }
+- (void)setRedDotBorderWith:(CGFloat)redDotBorderWith{
+    _redDotBorderWith = redDotBorderWith;
+    [self update_subViews];
+
+}
+
+- (void)setRedDotBoderColor:(UIColor *)redDotBoderColor{
+    _redDotBoderColor = redDotBoderColor;
+    [self update_subViews];
+
+}
+
 #pragma mark  make_SubViewLayout
 - (void)make_SubViewLayout{
     

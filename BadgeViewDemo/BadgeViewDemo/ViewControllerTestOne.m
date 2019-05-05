@@ -35,7 +35,11 @@
     self.navigationItem.leftBarButtonItem.redDotRadius = 5.0;
     self.navigationItem.leftBarButtonItem.redDotOffset = CGPointMake(4, +5);
     self.navigationItem.leftBarButtonItem.redDotNumber = 100;
+    self.navigationItem.leftBarButtonItem.redDotBorderColor = [UIColor orangeColor];
+    self.navigationItem.leftBarButtonItem.redDotBorderWidth = 1.0;
+
     [self.navigationItem.leftBarButtonItem ShowBadgeView];
+
     
     UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
     [rightbtn setFrame:CGRectMake(0, 0, 25, 35)];
@@ -47,7 +51,9 @@
     self.navigationItem.rightBarButtonItem.redDotOffset = CGPointMake(-5, 5);
     
     self.tabBarItem.redDotColor =[UIColor greenColor];
-    self.tabBarItem.redDotNumber = 100;
+    self.tabBarItem.redDotBorderColor = [UIColor redColor];
+    self.tabBarItem.redDotBorderWidth = 1.0;
+    self.tabBarItem.redDotNumber = 88;
     [self.tabBarItem ShowBadgeView];
     
     [NSObject PrintClassIvar:[UIBarButtonItem class]];
@@ -76,11 +82,14 @@
     return 60;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.row %2 ==0 )
+    {
+        [self.tabBarItem ShowBadgeView];
+        return;
+    }
    [self.tabBarItem hideBadgeView];
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
     
     
 }
