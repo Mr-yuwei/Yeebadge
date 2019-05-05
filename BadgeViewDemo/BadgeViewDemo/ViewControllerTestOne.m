@@ -30,8 +30,8 @@
     [leftbtn setFrame:CGRectMake(0, 0, 25, 35)];
     [leftbtn setImage:[UIImage imageNamed:@"icon_my_message"] forState:UIControlStateNormal];
     UIBarButtonItem *leftbarItem=[[UIBarButtonItem alloc] initWithCustomView:leftbtn];
-    self.navigationItem.leftBarButtonItem =leftbarItem;
-    self.navigationItem.leftBarButtonItem.redDotColor =[UIColor blueColor];
+    self.navigationItem.leftBarButtonItem = leftbarItem;
+    self.navigationItem.leftBarButtonItem.redDotColor = [UIColor blueColor];
     self.navigationItem.leftBarButtonItem.redDotRadius = 5.0;
     self.navigationItem.leftBarButtonItem.redDotOffset = CGPointMake(4, +5);
     self.navigationItem.leftBarButtonItem.redDotNumber = 100;
@@ -41,19 +41,20 @@
     [self.navigationItem.leftBarButtonItem ShowBadgeView];
 
     
-    UIButton *rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *rightbtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightbtn setFrame:CGRectMake(0, 0, 25, 35)];
     [rightbtn setImage:[UIImage imageNamed:@"icon_my_message"] forState:UIControlStateNormal];
-    UIBarButtonItem *rightbarItem=[[UIBarButtonItem alloc] initWithCustomView:rightbtn];
-    self.navigationItem.rightBarButtonItem =rightbarItem;
-    self.navigationItem.rightBarButtonItem.redDotColor =[UIColor brownColor];
+    UIBarButtonItem *rightbarItem = [[UIBarButtonItem alloc] initWithCustomView:rightbtn];
+    self.navigationItem.rightBarButtonItem = rightbarItem;
+    self.navigationItem.rightBarButtonItem.redDotColor = [UIColor brownColor];
     [self.navigationItem.rightBarButtonItem ShowBadgeView];
     self.navigationItem.rightBarButtonItem.redDotOffset = CGPointMake(-5, 5);
     
     self.tabBarItem.redDotColor =[UIColor greenColor];
-    self.tabBarItem.redDotBorderColor = [UIColor redColor];
+    self.tabBarItem.redDotBorderColor = [UIColor blueColor];
     self.tabBarItem.redDotBorderWidth = 1.0;
-    self.tabBarItem.redDotNumber = 88;
+    self.tabBarItem.redDotMaxNumber = 99;
+    self.tabBarItem.redDotNumber = 10000;
     [self.tabBarItem ShowBadgeView];
     
     [NSObject PrintClassIvar:[UIBarButtonItem class]];

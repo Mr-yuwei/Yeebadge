@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger,YeeBadgeStytle){
 @property(nonatomic,assign)NSInteger redDotMaxNumber; // default 99
 @property(nonatomic,copy)  NSString  *redDotText;
 @property(nonatomic,retain)UIColor   *redDotColor;
-@property(nonatomic,retain)UIColor   *redDotBoderColor;
+@property(nonatomic,retain)UIColor   *redDotBorderColor;
 @property(nonatomic,retain)UIColor   *redDotTextColor;
 @property(nonatomic,retain)UIFont    *redDotTextFont;
 @property(nonatomic,assign)CGPoint   redDotOffset;   // default is (0.0)
