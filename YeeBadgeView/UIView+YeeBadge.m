@@ -13,8 +13,6 @@
 static NSString *Yee_BadgeViewKey= @"Yee_BadgeViewKey";
 static NSString *Yee_BadgeViewTopConstraintKey  = @"Yee_BadgeViewTopConstraintKey";
 static NSString *Yee_BadgeViewRightConstraintKey= @"Yee_BadgeViewRightConstraintKey";
-static NSString *Yee_BadgeViewRedBorderWidthKey = @"Yee_BadgeViewRedBorderWidthKey";
-static NSString *Yee_BadgeViewRedBorderColorKey = @"Yee_BadgeViewRedBorderColorKey";
 @implementation UIView (YeeBadge)
 - (YeeBadgeView*)_yeeBadgeView{
     YeeBadgeView *yeeBadgeView = objc_getAssociatedObject(self,&Yee_BadgeViewKey);

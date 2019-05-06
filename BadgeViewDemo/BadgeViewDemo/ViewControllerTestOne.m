@@ -22,11 +22,10 @@
 @implementation ViewControllerTestOne
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     self.title=@"one";
     [self add_OwnView];
-    UIButton *leftbtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *leftbtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftbtn setFrame:CGRectMake(0, 0, 25, 35)];
     [leftbtn setImage:[UIImage imageNamed:@"icon_my_message"] forState:UIControlStateNormal];
     UIBarButtonItem *leftbarItem=[[UIBarButtonItem alloc] initWithCustomView:leftbtn];
@@ -50,7 +49,7 @@
     [self.navigationItem.rightBarButtonItem ShowBadgeView];
     self.navigationItem.rightBarButtonItem.redDotOffset = CGPointMake(-5, 5);
     
-    self.tabBarItem.redDotColor =[UIColor greenColor];
+    self.tabBarItem.redDotColor = [UIColor greenColor];
     self.tabBarItem.redDotBorderColor = [UIColor blueColor];
     self.tabBarItem.redDotBorderWidth = 1.0;
     self.tabBarItem.redDotMaxNumber = 99;
@@ -59,8 +58,7 @@
     
     [NSObject PrintClassIvar:[UIBarButtonItem class]];
 }
--(void)add_OwnView{
-   
+- (void)add_OwnView{
     m_ptableView=[[UITableView alloc] initWithFrame:self.view.bounds];
     m_ptableView.delegate = self;
     m_ptableView.dataSource = self;
